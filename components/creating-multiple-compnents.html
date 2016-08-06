@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React multiple component</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+
+	<script type="text/jsx">
+		// creating component 
+		var Component_1 = React.createClass({
+			render: function(){
+				return (
+					<h1>Hello all! this is Component_1</h1>
+				);
+			}
+		});
+
+		var Component_2 = React.createClass({
+			render: function(){
+				return (
+					<h1>Hello all! this is Component_2</h1>
+				);
+			}
+		});
+
+		var Component_3 = React.createClass({
+			render: function(){
+				return (
+					<h1>Hello all! this is Component_3</h1>
+				);
+			}
+		});		
+
+		// rendering multiple component 
+		
+		React.render(
+		
+			<div>
+				<Component_1 />
+				<Component_2 />
+				<Component_3 />
+			</div>
+
+		,document.getElementById("container"));
+
+	</script>
+
+</body>
+
+
+
+</html>
