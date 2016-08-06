@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React multiple component</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+
+	<script type="text/jsx">
+		// creating component 
+		
+		var Content = React.createClass({
+			doOnClick: function(){
+				alert(this.props.children);
+			},
+			render: function(){
+				return (
+					<div>
+						<a onClick={this.doOnClick} href="#">I like {this.props.option}</a>
+					</div>
+				);
+			}
+		});	
+
+		// rendering multiple component 
+		
+		React.render(
+		
+			<div>
+				<Content option="food"> Food lovers </Content>
+				<Content option="dress"> Dress lovers </Content>
+				<Content option="nature"> Nature lovers </Content>
+			</div>
+
+		,document.getElementById("container"));
+
+	</script>
+
+</body>
+
+
+
+</html>
